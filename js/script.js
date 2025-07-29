@@ -1,0 +1,7 @@
+
+//Toggle menu script
+function toggleMenu() {
+    const menu = document.querySelector('.menu-items');
+    menu.classList.toggle('show');
+}
+

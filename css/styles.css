@@ -1,0 +1,330 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-image: url("/images/b.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+
+/* The different backgrounds */
+
+#explanation{
+    background-image: url("/images/b1.jpg");
+}
+
+#types{
+    background-image: url("/images/test8.jpg");
+}
+
+#contribution{
+    background-image: url("/images/b2.jpg");
+}
+
+#trusted{
+    background-image: url("/images/test5.jpg");
+}
+
+#nonfinancial{
+    background-image: url("/images/b5.jpg");
+}
+
+/* Scroll styling */
+
+html {
+    scroll-behavior: smooth;
+}
+
+.textfield::-webkit-scrollbar {
+    width: 8px;
+}
+
+.textfield::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 4px;
+}
+
+/* Nav bar styling */
+
+.topnav {
+    width: 100%;
+    height: 15vh;
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.6);
+    position: relative; /* For dropdown positioning */
+}
+
+.titlebar {
+    width: 23%;
+    height: 100%;
+    display: flex;
+    flex-shrink: 0;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    align-items: center;
+}
+
+.small-title {
+    font-style: italic;
+    font-size: 1.5vw;
+    color: #ebffff;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.big-title {
+    font-size: 2vw;
+    color: #ebffff;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.titlebar a {
+    text-decoration: none;
+    color: black;
+}
+
+.titlebar a:visited {
+    color: black;
+}
+
+.menu-items{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.menu-item {
+    width: 25%;
+    height: 100%;
+    display: flex;
+    padding-left: 55px;
+    justify-content: center;
+    align-items: center;
+    font-style: italic;
+    text-shadow: 1px 1px 3px rgba(172, 167, 167, 0.6);
+}
+
+.menu-item a {
+    color: black;
+    text-decoration: none;
+}
+
+.menu-item a:visited {
+    color: black;
+}
+
+/* Hamburger icon - hidden on large screens */
+.icon {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 15px;
+    margin-left: auto;
+    background-color: black;
+}
+
+/* Responsive dropdown for smaller screens */
+@media screen and (max-width: 900px) {
+
+
+    .menu-items {
+        display: none; 
+        flex-direction: column;
+        position: absolute;
+        top: 100%; 
+        right: 0px;
+        background-color: rgba(11, 11, 11, 0.846);
+        width: 100vw;
+    }
+
+    .menu-items.show {
+        display: flex; /* Show when toggled */
+    }
+
+    .menu-item {
+        width: 100%;
+        height: auto;
+        justify-content: flex-start;
+        padding: 10px;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .menu-item a {
+        width: 100%;
+        color: rgb(255, 255, 255);
+    }
+    
+    .menu-item a:visited {
+        color: rgb(255, 255, 255);
+    }
+
+    .menu-item:hover {
+        background-color: #9d9d9dab;
+    }
+
+    .icon {
+        display: block;
+    }
+
+    .topnav {
+        height: 10%;
+        flex-wrap: wrap;
+    }
+
+    .small-title{
+        font-size: 15px;
+    }
+
+    .big-title{
+        font-size: 15px;
+        text-align: center;
+    }
+
+}
+
+/* Change titlebar for smaller screens */
+@media screen and (max-width: 700px) {
+
+    .small-title{
+        font-size: 12px;
+    }
+
+    .big-title{
+        font-size: 12px;
+        text-align: center;
+    }
+
+    .textfield{
+        font-size: 14px;
+    }
+}
+
+/* Remove titlebar for smallest screens */
+@media screen and (max-width: 500px) {
+
+    .big-title, .small-title{
+        display: none;
+    }
+
+}
+
+
+.content{
+    width: 100%;
+    height: 95%;
+    display: flex;
+    justify-content: center;
+    flex-direction:row;
+}
+
+.content-index{
+    width: 100%;
+    height: 95%;
+    display: flex;
+    flex-direction:row;
+    padding: 50px;
+}
+
+.front-quote{
+    height: 30%;
+    width: 40%;
+    display: flex;
+    font-size: 1.2vw;
+    flex-direction: column;
+    color: rgb(43, 40, 37);
+    font-style: italic;
+}
+
+
+.textfield{
+    width: 77%;
+    height: calc(100vh - 15vh);
+    background-color: rgba(0, 0, 0, 0.8);
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding: 3%;
+    color: rgb(248, 237, 219);
+    text-align: center;
+    overflow: scroll;
+}
+
+/* In text styles */
+.quote{
+    text-shadow: #ddd;
+    color: rgb(255, 136, 255);
+    font-style: italic;
+}
+
+.type{
+    text-shadow: #ddd;
+    color: rgb(227, 171, 94);
+    font-style: italic;
+}
+
+.helphighlight{
+    text-shadow: #ddd;
+    color: rgb(131, 225, 122);
+    font-style: italic;
+}
+
+.trustedhighlights{
+    text-shadow: #ddd;
+    color: rgb(78, 214, 255);
+    font-style: italic;
+}
+
+.nonfinancialhighlights{
+    text-shadow: #ddd;
+    color: rgb(255, 184, 78);
+    font-style: italic;
+}
+
+.textfield a{
+    color: white;
+    text-decoration: underline;
+}
+
+.textfield a:visited{
+    color: white;
+    text-decoration: underline;
+}
+
+.footer{
+    width: 100%;
+    height: 5%;
+    display: flex;
+    position: fixed;
+    bottom: 0%;
+    justify-content: center;
+    background-color: rgb(0, 0, 0);
+    align-items: center;
+}
+
+.fa {
+    font-size: 150px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+.side-image{
+    width: 23%;
+    height: 100%;
+    display: flex;
+}
