@@ -21,23 +21,23 @@
 /* The different backgrounds */
 
 #explanation{
-    background-image: url("/images/b1.jpg");
+    background-image: url("../images/b1.jpg");
 }
 
 #types{
-    background-image: url("/images/b3.jpg");
+    background-image: url("../images/b3.jpg");
 }
 
 #contribution{
-    background-image: url("/images/b2.jpg");
+    background-image: url("../images/b2.jpg");
 }
 
 #trusted{
-    background-image: url("/images/b4.jpg");
+    background-image: url("../images/b4.jpg");
 }
 
 #nonfinancial{
-    background-image: url("/images/b5.jpg");
+    background-image: url("../images/b5.jpg");
 }
 
 /* Scroll styling */
